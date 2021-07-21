@@ -8,6 +8,6 @@ jobs:
   - deployment: Deploy
     displayName: Deploy to dev
     environment: dev
-    container: robhofmann/devops.pipelines.container.azurecli:2.25.0
+    container: azuredocumentation/devops.pipelines.container.azurecli:2.25.0
 ```
 Simply set the tag to the Azure CLI version you want to use!
