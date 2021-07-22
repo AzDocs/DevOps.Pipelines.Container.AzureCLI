@@ -1,3 +1,5 @@
+[![Docker](https://github.com/AzDocs/devops.pipelines.container.azurecli/actions/workflows/docker-publish.yml/badge.svg)](https://github.com/AzDocs/devops.pipelines.container.azurecli/actions/workflows/docker-publish.yml)
+
 # Azure DevOps - Azure CLI container
 Don't you hate it when a new Azure CLI version gives you a new bug? Here is the solution! You can use this container within your pipeline and select the Azure CLI version you want to use. How? It's simple!
 
