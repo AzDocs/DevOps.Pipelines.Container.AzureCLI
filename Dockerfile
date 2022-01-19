@@ -40,11 +40,10 @@ RUN ALPINE_GLIBC_BASE_URL="https://github.com/sgerrand/alpine-pkg-glibc/releases
         "$ALPINE_GLIBC_BIN_PACKAGE_FILENAME" \
         "$ALPINE_GLIBC_I18N_PACKAGE_FILENAME"
 
-RUN apk add --no-cache curl tar openssl sudo bash shadow jq python3 ca-certificates less ncurses-terminfo-base krb5-libs libgcc libintl libssl1.1 libstdc++ tzdata userspace-rcu zlib icu-libs
+RUN apk add --no-cache curl tar openssl sudo bash shadow jq python3 ca-certificates less ncurses-terminfo-base krb5-libs libgcc libintl libssl1.1 libstdc++ tzdata userspace-rcu zlib icu-libs rust cargo py3-wheel
 
 RUN apk add -U python3 bash && \
     apk add --virtual=build gcc python3-dev musl-dev libffi-dev openssl-dev make linux-headers py3-pip && \
-    pip3 install cryptography==2.8 && \
     pip3 install azure-cli==${AZ} && \
     ln -s /usr/bin/python3 /usr/bin/python
 
