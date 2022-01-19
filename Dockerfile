@@ -1,6 +1,6 @@
 FROM alpine:latest
 
-ENV AZ 2.32.0
+ENV AZ 2.31.0
 
 RUN ALPINE_GLIBC_BASE_URL="https://github.com/sgerrand/alpine-pkg-glibc/releases/download" && \
     ALPINE_GLIBC_PACKAGE_VERSION="2.33-r0" && \
@@ -44,6 +44,7 @@ RUN apk add --no-cache curl tar openssl sudo bash shadow jq python3 ca-certifica
 
 RUN apk add -U python3 bash && \
     apk add --virtual=build gcc python3-dev musl-dev libffi-dev openssl-dev make linux-headers py3-pip && \
+    pip3 install cryptography==2.8 && \
     pip3 install azure-cli==${AZ} && \
     ln -s /usr/bin/python3 /usr/bin/python
 
