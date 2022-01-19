@@ -1,6 +1,6 @@
 FROM alpine:latest
 
-ENV AZ 2.27.1
+ENV AZ 2.31.0
 
 RUN ALPINE_GLIBC_BASE_URL="https://github.com/sgerrand/alpine-pkg-glibc/releases/download" && \
     ALPINE_GLIBC_PACKAGE_VERSION="2.33-r0" && \
